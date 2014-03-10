@@ -1,0 +1,14 @@
+body {
+	background:#FFF url(images/in-media-res.png) no-repeat scroll 4.2em 1em;
+	color:#000;
+	line-height:1.2em;
+	margin:3em;
+	padding:1em 1em 1em 128px;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Bitstream Vera Sans", Verdana, sans-serif;
+}
+h1 {
+    font-size: 1.714em;
+    line-height: .75em;	
+	margin:2em 0 0 0;
+	color:#222;	
+}
