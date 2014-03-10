@@ -1,26 +1,15 @@
-<?php
-// $Id: popups-popup.tpl.php,v 1.1.2.7 2009/03/05 20:05:44 starbow Exp $
-/**
- * @file
- */
-?>
 <script type="text/javascript">
-	<!--
+<!--
  
 if (Drupal.jsEnabled) {
 	$(document).ready(function() {
 		
-		// Hide the Preview Button, Tips, and Formatiing options 
-		//$("#edit-preview").hide();
-		//$(".tips").hide();
-		//$("#popups-body p").hide();
 		$(".textarea-identifier").hide();
 		
 		// Set the default text for the five axes 
 		$("#edit-reviews-1-review").DefaultValue("What are you working on");
 		$("#edit-reviews-2-review").DefaultValue("Citation");
 		$("#edit-reviews-3-review").DefaultValue("Please provide the course title, level (ie., undergraduate or graduate), and give details on how you integrated the post");
-		//$("#edit-reviews-4-review").DefaultValue("Feel free to add your thoughts in the comment field at the bottom of the page on the right side");
 		$("#edit-reviews-5-review").DefaultValue("How might this post be improved upon (this is a place for comments about structure and format, not content. If you want to engage with the curator's arguments, please do so in the comment field at the bottom of the page on the right side)");
 
 		$(".node-type-nodereview span").click(function(){

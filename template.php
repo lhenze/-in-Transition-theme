@@ -20,6 +20,7 @@ function in_transition_preprocess_search_result(&$vars) {
 
   $vars['thumbnail'] = $result['node']->ss_thumbnail;
 
+  // to-do
   if (!$vars['thumbnail']) {
     $vars['thumbnail'] = '<img src="http://mediacommons.futureofthebook.org/imr/files/theme-weeks/tw-placeholder.png" alt="thumbnail" />';
   }
@@ -59,52 +60,66 @@ function in_transition_preprocess_search_result(&$vars) {
 function in_transition_taxonomy_links($node, $vid) {
 
   $output = '';
+  $tags = array();
+  
+  // if the current node has taxonomy terms, get them
+  if (count($node->taxonomy)) {
 
-  //if the current node has taxonomy terms, get them
-  if (count($node->taxonomy)) :
-	  $tags = array();
-	  foreach ($node->taxonomy as $term) {
-	    if ($term->vid == $vid):
-	      $tags[] = l($term->name, taxonomy_term_path($term), array('attributes' =>  array('rel' => 'tag', 'title' => check_plain($term->name))));
-	    endif;
-	  }
+    foreach ($node->taxonomy as $term) {
+      if ($term->vid == $vid) {
+        $tags[] = l($term->name, taxonomy_term_path($term), array('attributes' =>  array('rel' => 'tag', 'title' => check_plain($term->name))));
+      }
+	}
 	
-    if ($tags) :
-	    //get the vocabulary name and name it $name
+    if (!empty($tags)) {
+	  //get the vocabulary name and name it $name
       $vocab = taxonomy_vocabulary_load($vid);
-	    $name = $vocab->name;
-	 	  $output .= '<ul class="' . $vocab->name . '"><li><span>' . $vocab->name . '</span><br /> ';
-		  $output .= implode(' |  </li><li>', $tags);
-	    $output .= '</li></ul>';
-    endif;
+	  $output .= '<ul class="' . $vocab->name . '"><li><span>' . $vocab->name . '</span><br /> ' . implode(' |  </li><li>', $tags) . '</li></ul>';
+    }
     
-	endif;
+  }
 
   return $output;
 
 }
 
-/* function to theme the comments and nodes to use real names from their profile $nodeOrComment needs to be passed either $node or $comment */
+/** 
+ * function to theme the comments and nodes to use real names from their profile $nodeOrComment 
+ * needs to be passed either $node or $comment 
+ */
 function in_transition_realname_links($nodeOrComment) {
-	$account = user_load(array('uid' => $nodeOrComment->uid)); 
-	$realname = check_plain($account->profile_name);
-	if (empty($realname)) {
-		return t('!username', array('!username' => theme('username', $nodeOrComment)));
-	} 
-	else {
-		return l(t('!realname', array('!realname' => $account->profile_name)), 'user/'.$nodeOrComment->uid, array('attributes' =>  array('title' => t("View !realname's profile", array('!realname' => $account->profile_name)),'class' => 'realname'))); 
-	}
+
+  $account = user_load(array('uid' => $nodeOrComment->uid));
+  $realname = check_plain($account->profile_name);
+  $output = '';
+  
+  if (empty($realname)) {
+    $output = t('!username', array('!username' => theme('username', $nodeOrComment)));
+  } 
+  else {
+    $output = l(t('!realname', array('!realname' => $account->profile_name)), 'user/'. $nodeOrComment->uid, array('attributes' =>  array('title' => t("View !realname's profile", array('!realname' => $account->profile_name)),'class' => 'realname'))); 
+  }
+  
+  return $output;
+  
 }
 
-/* function to theme the comments and nodes to use real names from their profile $nodeOrComment needs to be passed either $node or $comment */
+/**
+ * function to theme the comments and nodes to use real names from their profile 
+ * $nodeOrComment needs to be passed either $node or $comment
+ */ 
 function in_transition_university_affiliation($nodeOrComment) {
-	$account = user_load(array('uid' => $nodeOrComment->uid)); 
-	$university = check_plain($account->profile_affiliation);
-	if(empty($university)) {
-		return '';
-	} else {
-		return t(' — @university', array('@university' => $account->profile_affiliation));
-	}
+
+  $account = user_load(array('uid' => $nodeOrComment->uid)); 
+  $university = check_plain($account->profile_affiliation);
+  $output = '';
+
+  if (!empty($university)) {
+    $output = t(' — @university', array('@university' => $account->profile_affiliation));
+  }
+
+  return $output;
+
 }
 
 /*  Theme week page */
@@ -120,12 +135,10 @@ function in_transition_themeweek($post, $placeholder, $truncChar) {
 	$image = $theme_week_item->field_tease_image[0]['filepath'];
 	$twT = truncate_utf8($theme_week_item->title,  $truncChar, TRUE, TRUE);
 	$twP = truncate_utf8($pl_id, $truncChar2, TRUE, TRUE);
-
-	/*Item  Image*/	
-	if (empty($emImage) && empty($image) && empty($twP) && empty($twT)) {
-	  print '';
-	} 
-	else {
+	
+	if (empty($emImage) && empty($image) && empty($twP) && empty($twT)) {  print ''; }
+	
+        else {
 	  print '<div class="twp"><div class="twp-teaser-image">';
 	}
 
@@ -139,9 +152,7 @@ function in_transition_themeweek($post, $placeholder, $truncChar) {
 	  print check_markup($theme_week_item->field_image_embed[0]['safe']);
 	}
  
-	if (!empty($emImage) || !empty($image) || !empty($twP)) {
-	  print "</div>\n";
-	} 
+	if (!empty($emImage) || !empty($image) || !empty($twP)) { print "</div>"; }
 	
 	/** Item  Title */	
 	if (!empty($twT) || !empty($twP)) {
@@ -360,7 +371,8 @@ function in_transition_load_nodereview_block($node) {
   }
 	
   // Query the DB to see if there are any reviews
-  $sql = "SELECT `nid` FROM `imr_nodereview` WHERE `reviewed_nid` = %d ORDER BY `nid` DESC";
+  $sql = "SELECT `nid` FROM {nodereview} WHERE `reviewed_nid` = %d ORDER BY `nid` DESC";
+
   $result = db_query_range(db_rewrite_sql($sql), $nodeId, 0, 10);
 
   // Count the reviews

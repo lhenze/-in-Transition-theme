@@ -1,8 +1,9 @@
 <?php
-// $Id: theme-settings-init.php,v 1.1.2.2 2008/04/21 02:45:35 johnalbin Exp $
+
 
 if (is_null(theme_get_setting('zen_block_editing'))) {
-  global $theme_key;
+
+   global $theme_key;
 
   /*
    * Modify the values in $defaults below if you want the subtheme to have
@@ -20,17 +21,20 @@ if (is_null(theme_get_setting('zen_block_editing'))) {
 
   // Get default theme settings.
   $settings = theme_get_settings($theme_key);
+  
   // Don't save the toggle_node_info_ variables.
   if (module_exists('node')) {
     foreach (node_get_types() as $type => $name) {
       unset($settings['toggle_node_info_' . $type]);
     }
   }
+  
   // Save default theme settings.
   variable_set(
     str_replace('/', '_', 'theme_'. $theme_key .'_settings'),
     array_merge($defaults, $settings)
   );
+  
   // Force refresh of Drupal internals.
   theme_get_setting('', TRUE);
 }

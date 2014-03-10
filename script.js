@@ -2,10 +2,10 @@
  * Implementation of Drupal behavior.
  */
 
-Drupal.behaviors.in_media_res = function( context ) {
+Drupal.behaviors.in_transition = function( context ) {
   
   $('form').submit( function() {
-	var prevent, li = '';
+    var prevent, li = '';
     $(this).find('.required').each( function( index ) {
       if ( $(this).val().trim() === '' ) {
         prevent = true;

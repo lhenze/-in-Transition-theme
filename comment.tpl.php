@@ -54,8 +54,8 @@
   <div class="content">
     <?php print $content; ?>
       <?php if ($signature && $comment->cid > 1156): // Change "1234" to the last comment ID used before upgrading to Drupal 6 ?>
-    <div class="user-signature clear-block">
-      <?php print $signature ?>
+<div class="user-signature clear-block">
+<?php print $signature ?>
     </div>
     <?php endif; ?>
   </div>
@@ -66,4 +66,4 @@
     </div>
   <?php endif; ?>
 
-</div></div> <!-- /comment-inner, /comment -->
+</div></div>

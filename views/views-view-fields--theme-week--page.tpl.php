@@ -19,11 +19,12 @@
  * @ingroup views_templates
  */
 ?>
-	<?php 
-	print '<h1>';
-	print l(t('!title', array('!title' => check_plain($row->node_title),)), 'node/'.$row->nid,  array('html' => TRUE, 'attributes' => array('title' => t('!title', array('!title' => $row->node_title)),'class' => 'title')));
-	print '</h1>';
-	?>
+
+<?php 
+  print '<h1>';
+  print l(t('!title', array('!title' => check_plain($row->node_title),)), 'node/'.$row->nid,  array('html' => TRUE, 'attributes' => array('title' => t('!title', array('!title' => $row->node_title)),'class' => 'title')));
+  print '</h1>';
+?>
 
 <div class="themeweek-container">	
 	<?php print in_transition_themeweek_views($row->node_data_field_theme_week_check_field_featured_post_1_nid, $row->node_data_field_theme_week_check_field_featured_1_placeholder_value, 55); ?>
@@ -46,5 +47,3 @@
 <?php print $row->node_data_field_theme_week_check_field_homepage_teaser_text_value; ?>
 </div>
 <div class="clear"></div>
-
-<?php //print_r($row) ?>
