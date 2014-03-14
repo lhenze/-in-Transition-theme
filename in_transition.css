@@ -141,24 +141,24 @@ z-index:1; /*for Opera 5 and 6*/
 	display:block; 
   }
   #site-slogan a#site-slogan-link {
-	width:195px;
-	height:23px;	
+	width: 204px;
+	height: 30px;	
 	text-indent:-10000px;
 }
 #site-slogan a#site-slogan-link2 {
-  width:179px;
-  height:23px;  
+  width: 281px;
+  height:30px;  
   text-indent:-10000px;
 }
   #site-slogan a#site-slogan-link em {
-width:195px;
-height:23px;
-background: url('images/media-commons-project.png') 0 0 no-repeat;
+width: 204px;
+  height: 30px;
+background: url('images/amediacommons.png') 0 0 no-repeat;
 }
 #site-slogan a#site-slogan-link2 em {
-width:179px;
-height:23px;
-background: url('images/cinemajournallogo.png') 0 0 no-repeat;
+width: 281px;
+height: 30px;
+background: url('images/cinemajournalproject.png') 0 0 no-repeat;
 }
 
 
