@@ -1,4 +1,6 @@
+
 /* $Id: zen.css,v 1.1.2.26 2008/04/20 04:22:15 johnalbin Exp $ */
+
 /*
  * ZEN STYLES
  *
@@ -25,237 +27,1783 @@
  *   Search           See line 320 of Zen's drupal5-reference.css file
  *   User Profiles    See line 945 of Zen's drupal5-reference.css file
  */
+
+
 /** body **/
-body {
-    background: #8a8a8a url(images/background.jpg) 0 0 repeat-x;
-    margin-top: 0;
-    padding-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+  body
+  {
+  background: #8a8a8a url(images/background.jpg) 0 0 repeat-x;
+  margin-top:0;
+  padding-top: 0;
+  margin-left: 0;
+  margin-right:0;
+  padding-left: 0;
+  padding-right: 0;
+
+  }
+
+  #page
+  {
+  background:transparent url(images/shadow-middle.png) 0 0 repeat-y;
+  width:990px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  #page-inner
+  {	
+	border-top:9px solid #782A71;	
+	background: #fff;
+	padding: 0 0 18px 18px;	
+	margin:0 8px 0 7px;
+	width:957px;  
 }
-#page {
-    background: transparent url(images/shadow-middle.png) 0 0 repeat-y;
-    width: 990px;
-    margin-left: auto;
-    margin-right: auto;
-}
-#page-inner {
-    border-top: 9px solid #782A71;
-    background: #fff;
-    padding: 0 0 18px 18px;
-    margin: 0 8px 0 7px;
-    width: 957px;
-}
+
 /* Grid for checking placement*/
-/*  
-  #page {
-  background:transparent url(images/imr-grid.png) 0 0 repeat-y;
-  }
-  #page-inner {
-  background:transparent;
-  }
-  
-*/
+/*	
+	#page {
+	background:transparent url(images/imr-grid.png) 0 0 repeat-y;
+	}
+	#page-inner {
+	background:transparent;
+	}
+	
+*/	
+	
 /** header **/
-#header { }
-#header-inner { }
-#logo-title /* Wrapper for logo,
-website name,
-and slogan */ {
-    margin-top: 12px;
-    width: 500px;
-    height: 85px;
-}
-#logo /* Wrapper for logo */ { margin: 0 0 6px 0 }
-#logo-image /* The actual logo image */ { width: 295px }
-#site-name /* The name of the website */ {
-    text-indent: -10000px;
-    padding: 0;
-    overflow: hidden;
-}
-#site-name a:link,
-#site-name a:visited {
+  #header
+  {
+
+  }
+
+  #header-inner
+  {
+  }
+
+  #logo-title /* Wrapper for logo, website name, and slogan */
+  {
+	margin-top:12px;	
+	width: 500px;
+	height:85px;
+  }
+
+  #logo /* Wrapper for logo */
+  {
+margin: 0 0 6px 0;
+  }
+
+  #logo-image /* The actual logo image */
+  {
+	width:295px;
+
+  }
+
+  #site-name /* The name of the website */
+  {
+  text-indent:-10000px;
+  padding:0;
+  overflow:hidden;
+  }
+
+  #site-name a:link,
+  #site-name a:visited
+  {
     color: #000;
     text-decoration: none;
-}
-#site-name a:hover { text-decoration: underline }
+  }
+
+  #site-name a:hover
+  {
+    text-decoration: underline;
+  }
 .replace {
-    position: relative;
-    /* Start Mac IE5 filter \*/
-    overflow: hidden;
-    /* End Mac IE5 filter */
-    padding: 0;
-    margin: 0;
+position:relative;
+/* Start Mac IE5 filter \*/
+overflow:hidden;
+/* End Mac IE5 filter */
+padding:0;
+margin:0;
 }
+
 .replace em {
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1; /*for Opera 5 and 6*/
+display: block;
+position: absolute;
+top: 0px; 
+left: 0px;
+z-index:1; /*for Opera 5 and 6*/
 }
-#site-slogan a /* The slogan (or tagline) of a website */ {
-    float: left;
-    color: #fff !important;
-    cursor: pointer;
-    cursor: hand;
-    display: block;
-}
-#site-slogan a#site-slogan-link {
-    width: 204px;
-    height: 30px;
-    text-indent: -10000px;
+
+  #site-slogan a /* The slogan (or tagline) of a website */
+  { 
+	float:left;
+	color:#fff !important;
+	cursor: pointer;
+	cursor: hand;
+	display:block; 
+  }
+  #site-slogan a#site-slogan-link {
+	width: 204px;
+	height: 30px;	
+	text-indent:-10000px;
 }
 #site-slogan a#site-slogan-link2 {
-    width: 281px;
-    height: 30px;
-    text-indent: -10000px;
+  width: 281px;
+  height:30px;  
+  text-indent:-10000px;
 }
-#site-slogan a#site-slogan-link em {
-    width: 204px;
-    height: 30px;
-    background: url('images/amediacommons.png') 0 0 no-repeat;
+  #site-slogan a#site-slogan-link em {
+width: 204px;
+  height: 30px;
+background: url('images/amediacommons.png') 0 0 no-repeat;
 }
 #site-slogan a#site-slogan-link2 em {
-    width: 281px;
-    height: 30px;
-    background: url('images/cinemajournalproject.png') 0 0 no-repeat;
+width: 281px;
+height: 30px;
+background: url('images/cinemajournalproject.png') 0 0 no-repeat;
 }
-#header-blocks /* Wrapper for any blocks placed in the header region */ {
-    float: right;
-    width: 461px;
-    text-align: right;
-    margin-right: 18px;
-    margin-top: 3px;
-}
-#header-blocks ul { }
-#header-blocks ul li { }
+
+
+  #header-blocks /* Wrapper for any blocks placed in the header region */
+  {
+	float:right;
+  	width:461px;
+	text-align:right;
+	margin-right:18px;
+	margin-top:3px;
+  }
+  
+  #header-blocks ul
+  {
+
+  }
+  
+  #header-blocks ul li 
+  {
+ 
+  }
+
 /** main (container for everything else) **/
-#main { }
-body.one-sidebar #main { }
-body.two-sidebars #main { }
-#main-inner { }
-/** content **/
-#content { }
-#content-inner { }
-#mission /* The mission statement of the site (displayed on homepage) */ { }
-#content-top /* Wrapper for any blocks placed in the "content top" region */ { }
-#content-header /* Wrapper for breadcrumb,
-title,
-messages,
-tabs,
-and help */ { }
-.breadcrumb /* The path to the current page in the form of a list of links */ {
-    display: none;
-    padding-bottom: 0; /* Undo system.css */
+  #main
+  {
+ 
+  }
+  
+  body.one-sidebar #main
+  {
+
+  }
+  
+  body.two-sidebars #main
+  {
+
+  }
+
+  #main-inner
+  {
+
 }
-h1.title,
-/* The title of the page */
-  h2.title,
-/* Block title or the title of a piece of content when it is given in a list of content */
-  h3.title /* Comment title */ { margin: 0 }
-div.messages /* Important messages (status,
-warning,
-and error) for the user */ {
+
+/** content **/
+  #content
+  {
+
+  }
+
+  #content-inner
+  {
+
+  }
+
+  #mission /* The mission statement of the site (displayed on homepage) */
+  {
+  }
+
+  #content-top /* Wrapper for any blocks placed in the "content top" region */
+  {
+  }
+
+  #content-header /* Wrapper for breadcrumb, title, messages, tabs, and help */
+  {
+  }
+
+  .breadcrumb /* The path to the current page in the form of a list of links */
+  {
+	display:none;
+    padding-bottom: 0; /* Undo system.css */
+  }
+
+  h1.title, /* The title of the page */
+  h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
+  h3.title /* Comment title */
+  {
+    margin: 0;
+  }
+
+  div.messages /* Important messages (status, warning, and error) for the user */
+  {
     margin: 0 1em 5px 1em;
     border: 2px solid #ccc;
     padding: 5px;
     color: #000;
     background-color: #fff;
     font-style: italic;
-}
-div.status /* Normal priority messages */ { }
-div.warning /* Medium priority messages */ { border-color: #ff7 }
-div.warning,
-tr.warning,
-body.section-admin tr.warning {
+  }
+
+  div.status /* Normal priority messages */
+  {
+  }
+
+  div.warning /* Medium priority messages */
+  {
+    border-color: #ff7;
+  }
+
+  div.warning,
+  tr.warning,
+  body.section-admin tr.warning
+  {
     color: #000;
     background-color: #ffc;
-}
-div.error /* High priority messages. See also the .error declaration below. */ { border-color: #c00 }
-div.error,
-tr.error,
-body.section-admin tr.error {
+  }
+
+  div.error /* High priority messages. See also the .error declaration below. */
+  {
+    border-color: #c00;
+  }
+
+  div.error,
+  tr.error,
+  body.section-admin tr.error
+  {
     color: #900;
     background-color: #fee;
-}
-div.tabs /* See also the tabs.css file. */ { }
-.help /* Help text on a page */ { margin: 1em 0 }
-.more-help-link /* Link to more help */ {
+  }
+
+  div.tabs /* See also the tabs.css file. */
+  {
+  }
+
+  .help /* Help text on a page */
+  {
+    margin: 1em 0;
+  }
+
+  .more-help-link /* Link to more help */
+  {
     font-size: 0.85em;
     text-align: right;
-}
-#content-area /* Wrapper for the actual page content */ { }
-.pager /* A list of page numbers when more than 1 page of content is available */ {
+  }
+
+  #content-area /* Wrapper for the actual page content */
+  {
+  }
+  
+  .pager /* A list of page numbers when more than 1 page of content is available */
+  {
     clear: both;
     margin: 2em 0 1em 0;
     text-align: center;
-}
-.pager a,
-.pager strong.pager-current { padding: 0.5em }
-.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ { margin: 1em 0 }
-#content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ { clear: both }
-#content-bottom .node-teaser,
-#content .node-type-post.node-teaser {
-    float: left;
-    width: 222px;
-    height: 90px;
-    margin: 17px 17px 0px 0px;
-}
-#content-bottom .block-inner h2.title {
+  }
+
+  .pager a, .pager strong.pager-current
+  {
+    padding: 0.5em;
+  }
+
+  .feed-icons /* The links to the RSS or Atom feeds for the current list of content */
+  {
+    margin: 1em 0;
+  }
+
+  #content-bottom /* Wrapper for any blocks placed in the "content bottom" region */
+  {
+	  clear:both;
+  }
+  
+  #content-bottom .node-teaser, #content .node-type-post.node-teaser
+  {
+float:left;
+  width:222px;
+  height:90px;
+  margin:17px 17px 0px 0px;
+  }
+  
+  #content-bottom .block-inner h2.title {
     font-size: 1.419em;
     line-height: .9em;
+   
 }
-#content-bottom .node-teaser h2.title,
-#content .node-teaser h2.title {
-    font-size: 0.857em;
-    line-height: 1.5em;
-}
-#content-bottom .node-teaser .links { }
-#content-bottom .node-teaser .links a:link { }
-#block-views-recent_unselected { margin-top: 38px }
-#block-views-recent_unselected .block-inner h2.title { }
+  #content-bottom .node-teaser h2.title, #content .node-teaser h2.title  
+  {
+	font-size:0.857em;
+	line-height: 1.5em;
+  }
+
+  #content-bottom .node-teaser .links 
+  {
+  }
+  
+  #content-bottom .node-teaser .links a:link 
+  {
+  }
+ 
+  #block-views-recent_unselected 
+  {
+  margin-top:38px;
+  }
+  
+  #block-views-recent_unselected .block-inner h2.title  {  
+
+  }
+
 /*Right side Blocks on the homepage*/
-#block-views-featured_posts,
-#block-views-recent_comments-block_1 {
-    margin-top: 2px;
-    float: right;
-    width: 222px;
-    /* margin-right: 18px; */
+#block-views-featured_posts, #block-views-recent_comments-block_1 {
+margin-top:2px;
+	float:right;
+	width:222px;
+	/* margin-right:18px; */
 }
-#block-views-featured_posts ul,
-#block-views-recent_comments-block_1 ul { margin-top: 2px }
-.view-recent-unselected { margin-top: 6px }
+#block-views-featured_posts ul, #block-views-recent_comments-block_1 ul {
+margin-top:2px;
+}
+.view-recent-unselected {
+	
+	margin-top:6px;
+}
+
 /** navbar **/
-#navbar { }
-#navbar-inner { }
-#search-box /* Wrapper for the search form */ { }
-#primary /* Primary links */ { }
-#secondary /* Secondary links */ { }
+  #navbar
+  {
+  }
+
+  #navbar-inner
+  {
+  }
+
+  #search-box /* Wrapper for the search form */
+  {
+  }
+
+  #primary /* Primary links */
+  {
+  }
+
+  #secondary /* Secondary links */
+  {
+  }
+
 /** sidebar-left **/
-#sidebar-left { }
-#sidebar-left-inner { }
-#sidebar-left-inner h2.title { }
+  #sidebar-left
+  {
+  }
+
+  #sidebar-left-inner
+  {
+
+  }
+  
+  #sidebar-left-inner h2.title
+  {
+
+  }
+
 /** sidebar-right **/
-#sidebar-right { }
-#sidebar-right-inner { }
-#sidebar-right-inner h2.title { }
-#sidebar-right-inner .node-teaser h2.title { }
-#sidebar-right-inner .node-teaser .links {
-    /*font-weight: 100;;
-    font-size: .9em;
-    color: #fff;
-    border-bottom: none;
-    margin: 0;*/
-}
-#sidebar-right-inner .node-teaser h2.title a:link,
-#sidebar-right-inner .node-teaser h2.title a:visited { }
-#sidebar-right-inner .node-teaser .links a:link,
-#sidebar-right-inner .node-teaser .links a:visited { }
-#sidebar-right-inner .node-inner { }
-#sidebar-right-inner .node-inner .submitted { display: none }
+  #sidebar-right
+  {
+    
+  }
+
+  #sidebar-right-inner
+  {
+
+  }
+  
+  #sidebar-right-inner h2.title
+  {
+
+  }
+  
+  #sidebar-right-inner .node-teaser h2.title  {
+
+  }
+  
+  #sidebar-right-inner .node-teaser .links
+  {
+  /*font-weight:100;
+  font-size: .9em;
+  color:#fff;
+  border-bottom: none;
+  margin:0;*/
+
+  }
+
+  
+  #sidebar-right-inner .node-teaser h2.title a:link, #sidebar-right-inner .node-teaser h2.title a:visited
+ 
+  {
+
+  }
+  
+  #sidebar-right-inner .node-teaser .links a:link, #sidebar-right-inner .node-teaser .links a:visited
+  {
+
+  }
+  
+  
+  
+  #sidebar-right-inner .node-inner 
+  {
+
+  }
+  
+  #sidebar-right-inner .node-inner .submitted
+  {
+  display: none;
+  }
+
 /** footer **/
-#footer { }
-#footer-inner { }
+  #footer
+  {
+  
+  }
+
+  #footer-inner
+  {
+
+
+  }
+
+  #footer-message /* Wrapper for the footer message from Drupal's "Site information"
+                     and for any blocks placed in the footer region */
+  {
+  text-align: center;
+  }
+
+	#page-footer 
+{
+  	background: url(images/shadow-bottom.png) 0 0 no-repeat;
+	width:990px;
+	height:32px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/** closure **/
+  #closure-blocks /* Wrapper for any blocks placed in the closure region */
+  {
+  }
+
+/** Drupal nodes **/
+  .node /* Node wrapper */
+  {
+  }
+
+  .node-inner /* Additional wrapper for node */
+  {
+  }
+
+  .sticky /* A sticky node (displayed before others in a list) */
+  {
+  }
+
+  .node-unpublished /* Unpublished nodes */
+  {
+    /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
+  }
+
+  .node-unpublished div.unpublished, /* The word "Unpublished" displayed beneath the content. */
+  .comment-unpublished div.unpublished
+  {
+    height: 0;
+    overflow: visible;
+    color: #d8d8d8;
+    font-size: 75px;
+    line-height: 1;
+    font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word; /* A very nice CSS3 property */
+  }
+
+  .node-mine /* A node created by the current user */
+  {
+  }
+
+  .node-teaser /* A node displayed as teaser */
+  {
+  }
+  
+  .node-teaser .taxonomy
+  {
+  display:none;
+  }
+
+  /* All nodes are given a node-type-FOO class that describes the type of
+   * content that it is. If you create a new content type called
+   * "my-custom-type", it will receive a "node-type-my-custom-type" class.
+   */
+  .node-type-page /* Page content node */
+  {
+  }
+
+  .node-type-story /* Story content node */
+  {
+  }
+
+  .node h2.title /* Node title */
+  {
+  }
+
+  .marker /* "New" or "Updated" marker for content that is new or updated for the current user */
+  {
+    color: #c00;
+  }
+
+  .node .picture /* The picture of the node author */
+  {
+  }
+
+  .node.node-unpublished .picture,
+  .comment.comment-unpublished .picture
+  {
+    position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
+  }
+
+  .node .submitted /* The "posted by" information */
+  {
+  font-size:0.85em;
+line-height:1.285em;
+  }
+
+  .node .taxonomy /* Node taxonomy (categories) */
+  {
+  font-size:.9em;
+  font-weight:bold;
+  color:#ccc;
+  }
+  
+  .node .taxonomy ul.links.inline 
+  {
+  display:inline;
+  font-weight:normal;
+  }
+
+  .node .content /* Node's content wrapper */
+  {
+ 
+  }
+
+  .node div.links /* Wrapper for node links */
+  {
+  }
+  
+  .view-content-recent-unselected div.links
+  {
+  margin:0;
+  }
+
+  ul.links /* Taxonomy links, node links, comment links */
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul.links.inline
+  {
+    display: inline;
+  }
+
+  ul.links li
+  {
+    display: inline;
+    list-style-type: none;
+    padding: 0 0.5em;
+  }
+
+  .preview .node /* Preview of the content before submitting new or updated content */
+  {
+    /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+  }
+
+/** Drupal comments **/
+  #comments /* Wrapper for all comments */
+  {
+	clear:both;
+	float:right;
+    margin:18px 0 18px 0;
+    font-size:.9em;
+    width:461px;
+  }
+
+  .comment /* Wrapper for a single comment */
+  {
+  border-top:solid 1px #ccc;
+  padding-top:.5em;
+  }
+
+  .comment-inner /* Additional wrapper for a single comment */
+  {
+  }
+
+  .comment.odd /* An odd-numbered comment in the list of comments */
+  {
+  }
+
+  .comment.even /* An even-numbered comment in the list of comments */
+  {
+  }
+
+  .comment-unpublished /* Unpublished comments */
+  {
+    /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
+  }
+
+  .comment-unpublished div.unpublished /* The word "Unpublished" displayed beneath the content. See also the div.unpublished declaration in the node section above. */
+  {
+  }
+
+  .comment-by-author /* A comment created by the node's author */
+  {
+  }
+
+  .comment-by-anon /* A comment created by an anonymous user */
+  {
+  }
+
+  .comment-mine /* A comment created by the current user */
+  {
+  }
+
+  .comment h3.title /* Comment title */
+  {
+  text-transform: uppercase;
+  font-size: 1em;
+  }
+
+  .new /* "New" marker for comments that are new for the current user */
+  {
+    color: #c00;
+  }
+
+  .comment .picture /* The picture of the comment author */
+  {
+  }
+
+  .comment .submitted /* The "posted by" information */
+  {
+  color:#999;
+  }
+
+  .comment .content /* Comment's content wrapper */
+  {
+  }
+
+  .comment div.links /* Wrapper for comment links. See also the ul.links declaration in the node section above. */
+  {
+    margin: 1em 0;
+  }
+
+  .indented /* Nested comments are indented */
+  {
+    /* margin-left: 25px; */ /* Drupal core uses a 25px left margin */
+  }
+
+  .preview .comment /* Preview of the comment before submitting new or updated comment */
+  {
+    /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+  }
+
+/*Post page */ 
+
+.node-type-post .box {
+/*	position:absolute;
+	left:0;*/
+	width:461px;
+	padding:0;
+	margin:0;
+}
+.comment-box .resizable-textarea {
+	padding:0;
+	margin:0;
+	
+}
+/** Drupal blocks **/
+  .block /* Block wrapper */
+  {
+    margin-bottom: 0em;
+  }
+
+  .block.region-odd /* Zebra striping for each block in the region */
+  {
+  }
+
+  .block.region-even /* Zebra striping for each block in the region */
+  {
+  }
+
+  .block.odd /* Zebra striping independent of each region */
+  {
+  }
+
+  .block.even /* Zebra striping independent of each region */
+  {
+  }
+
+  .region-count-1 /* Incremental count for each block in the region */
+  {
+  }
+
+  .count-1 /* Incremental count independent of each region */
+  {
+  }
+
+  .block-inner /* Additional wrapper for block */
+  {
+  }
+
+  .block h2.title /* Block title */
+  {
+	margin:0;
+padding:0;
+  }
+
+  .block .content /* Block's content wrapper */
+  {
+	margin:0;
+	padding:0;
+  }
+
+  #block-aggregator-category-1 /* Block for the latest news items in the first category */
+  {
+  }
+
+  #block-aggregator-feed-1 /* Block for the latest news items in the first feed */
+  {
+  }
+
+  #block-block-1 /* First administrator-defined block */
+  {
+  }
+
+  #block-blog-0 /* "Recent blog posts" block */
+  {
+  }
+
+  #block-book-0 /* "Book navigation" block for the current book's table of contents */
+  {
+  }
+
+  #block-comments-0 /* "Recent comments" block */
+  {
+  }
+
+  #block-forum-0 /* "Active forum topics" block */
+  {
+  }
+
+  #block-forum-1 /* "New forum topics" block */
+  {
+  }
+
+  #primary /* "Primary links" block */
+  {
+  float:left;
+margin-top:13px;
+  }
+  
+#block-menu-menu-anon/*'Anon' menu block */
+  {
+	margin-left:240px;
+  	float:left;
+	clear:both;
+  }
+
+
+#block-menu-menu-anon ul {
+	margin:0;
+	padding:3px 0 12px 0;
+}
+
+#block-menu-menu-anon ul li {
+ 	padding:5px 12px 0 0px;
+	line-height:1.285em;
+ }
+
+#block-menu-menu-anon ul li a {
+	line-height:1.285em;
+}
+#block-menu-menu-logged-in /*'logged in' menu block */
+  {
+  	float:right;
+	clear:both;
+	width:461px;
+ }
+  #block-menu-menu-logged-in ul {
+	text-align:right;
+	margin:0;
+	padding:3px 0 10px 0;
+}
+ #block-menu-menu-logged-in ul li {
+	line-height:1.285em;
+	padding:3px 0 0 8px;
+}
+ #block-menu-menu-logged-in ul li a {
+	line-height:1.285em;
+
+}
+  #block-node-0 /* "Syndicate" block for primary RSS feed */
+  {
+  }
+
+  #block-poll-0 /* "Most recent poll" block */
+  {
+  }
+
+  #block-profile-0 /* "Author information" block for the profile of the page's author */
+  {
+  }
+
+  #block-search-0 /* "Search form" block */
+  {
+  	margin: 2px 0 0 240px;
+	padding:0;
+	clear:both;
+  }
+ /* hide the "Search this site" text */
+#block-search-0 label {
+    display: none;
+	} 
+
+  #block-search-0 input#edit-search-block-form-keys
+  {
+  border:solid 1px #333;
+	width:138px;
+margin-right:10px;
+  }
+  #block-search-0 input#edit-submit {
+	margin:0px 0px 0px 0px;
+	background: url(images/search.png) 0 0 no-repeat;
+	width:65px;
+	height:21px;
+	border:none;
+	color:#fff !important;
+	font-weight:bold;
+	font-size:.725em;
+	
+}
+  #block-statistics-0 /* "Popular content" block */
+  {
+  }
+
+  #block-user-0 /* "User login form" block */
+  {
+  }
+
+  #block-user-1 /* "Navigation" block for Drupal navigation menu */
+  {
+  }
+
+  #block-user-2 /* "Who's new" block for a list of the newest users */
+  {
+  }
+
+  #block-user-3 /* "Who's online" block for a list of the online users */
+  {
+  }
+
+
+/** Drupal boxes **/
+  /* Wrapper for Comment form, Comment viewing options, Menu admin, and
+   * Search results.
+   */
+  .box /* Wrapper for box */
+  {
+  }
+
+  .box-inner /* Additional wrapper for box */
+  {
+  }
+
+  .box h2.title /* Box title */
+  {
+  }
+
+  .box .content /* Box's content wrapper */
+  {
+  }
+
+/** Miscellaneous Drupal styles **/
+  .error /* Errors that are separate from div.messages status messages (see above.) */
+  {
+    color: #c00;
+  }
+
+  .more-link /* Aggregator, blog, and forum more link */
+  {
+    text-align: right;
+  }
+
+  #user-login-form /* Drupal's default login form */
+  {
+    text-align: left;
+  }
+
+  tr.even, tr.odd /* Some tables have rows marked even or odd. See also the ".section-admin tr.even" declaration below. */
+  {
+    border-bottom: none;
+    padding: 0;
+  }
+
+  tr.even
+  {
+    /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  }
+
+  tr.odd
+  {
+    /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  }
+
+  li a.active /* The active item in a Drupal menu */
+  {
+    color: #000;
+  }
+
+
+/** Drupal forms **/
+  .form-item, /* Wrapper for a form element (or group of form elements) and its label */
+  .form-checkboxes,
+  .form-radios
+  {
+    margin: 1em 0;
+  }
+
+  .form-item input.error, /* Highlight the form elements that caused a form submission error */
+  .form-item textarea.error,
+  .form-item select.error
+  {
+    border: 2px solid #c00;
+  }
+
+  .form-item label /* The label for a form element */
+  {
+    display: block;
+    font-weight: bold;
+  }
+
+  .form-item label.option /* The label for a radio button or checkbox */
+  {
+    display: inline;
+    font-weight: normal;
+  }
+
+  .form-required /* The part of the label that indicates a required field */
+  {
+    color: #c00;
+  }
+
+  .form-item .description /* The descriptive help text (separate from the label) */
+  {
+    font-size: 0.85em;
+  }
+
+  .form-checkboxes .form-item, /* Pack groups of checkboxes and radio buttons closer together */
+  .form-radios .form-item
+  {
+    margin: 0.4em 0;
+  }
+
+  .form-submit /* The submit button */
+  {
+  }
+
+  .container-inline div, .container-inline label /* Inline labels and form divs */
+  {
+    display: inline;
+  }
+
+.tips /* Tips for Drupal's input formats */
+  {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+  }
+
+
+/** Drupal admin tables **/
+  /* We overrode these styles in html-elements.css, but restore them for the
+   * admin section of the site.
+   */
+  .section-admin tbody
+  {
+    border-top: 1px solid #ccc;
+  }
+
+  .section-admin th
+  {
+    text-align: left;
+    padding-right: 1em;
+    border-bottom: 3px solid #ccc;
+  }
+
+  .section-admin tbody th
+  {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .section-admin thead th
+  {
+    text-align: left;
+    padding-right: 1em;
+    border-bottom: 3px solid #ccc;
+  }
+
+  .section-admin tr.even,
+  .section-admin tr.odd
+  {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    padding: 0.1em 0.6em;
+  }
+  
+  
+  /* Begin CCK Field Themeing 
+  -------------------------------------------------- */
+  
+  /*Imagefield */
+  
+  
+  /* Post page */
+h1.title {
+margin-right:18px;
+	
+}
+.submitted-post {
+	
+	color:#777777;
+	font-size:1em;
+	line-height: 1.286em;
+}
+
+  
+  .curators-note h3.field-label 
+  {
+  margin-top:0;
+  }
+  
+  
+  .curators-note
+  {
+  float:right;
+  padding:0 0;
+  width:461px;
+  }
+
+ .video-embed-link {
+  padding:0 0;
+  width:461px;	
+text-align:center;
+} 
+
+.video-embed-link iframe {
+  max-width:460px;
+} 
+
+/*Taxonomy on the post pages */
+body.node-type-post .taxonomy {
+	margin:18px 18px 0 0;
+  	width:461px;
+}
+body.node-type-post .taxonomy ul {
+	padding:0;
+	list-style:none;
+}
+body.node-type-post .taxonomy ul li {
+	display:inline;
+	color:#333;
+}
+body.node-type-post .taxonomy ul li span {
+	line-height:1em;
+	font-size:1.286em;
+}
+
+
+/* Hide Tips and borders on Post page */
+body.page-node-add-post .tips, body.node-type-post .tips, body.section-comment .tips,
+body.page-node-add-post .tips + p
+  {
+	display:none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+  }
+body.page-node-add-post fieldset.collapsible {
+	border:none;
+	padding:0;
+}
+body.page-node-add-post .user fieldset.collapsible  legend{
+	display:none;	
+}
+body.page-node-add-post .editor fieldset.collapsible  legend{
+	display:block !important;	
+	line-height:15px;	
+}
+body.page-node-add-post fieldset.collapsed.collapsible  legend{
+	display:block;	
+	line-height:15px;
+}
+
+#field-tease-image-attach-wrapper .fieldset-wrapper {
+	height:200px; 
+}
+/* Front Page*/
+  body.front #content-top
+
+  {
+
+}
+ body.front #sidebar-left {
+	margin:414px 0 0 0;
+}  
+ body.front #sidebar-right {
+margin:64px  -939px 0 517px;
+border:solid;
+}
+
+/*Theme Week Teaser Themeing */
+
+body.front .node-type-theme-week-page  {
+width:700px;
+/* margin-left:-239px; */ 
+background:#fff url(images/theme-week-top.png) 0 0 no-repeat;
+}
+
+body.front .themeweek-container
+  {
+float:right;
+width:222px;  
+margin:0 0 0 0;
+padding:0;
+height:290px;
+}
+
+body.front #content-area .node-type-theme-week-page h2.title-below
+ {
+font-size:1.716em;
+line-height:1em;
+margin:0;
+ } 
+
+
+  body.front .field-field-featured-page-or-feed 
+  {
+
+  }
+
+body.front .theme_week_bottom {
+background:#fff url(images/theme-week-bottom.png) 0 0 no-repeat;	
+height:10px;
+margin-left:-11px;
+}
+  body.front .twp-teaser-image img, body.front .twp-teaser-image img{
+	width:50px;
+	float:left;
+	margin: 2px 5px 8px 0;
+	padding:0;
+	height:38px;
+}
+
+h2.title-page {
+	line-height:1.285em;
+	margin:16px 0 8px 0;	
+}
+body.front .node-type-theme-week-page .node-inner {
+	padding:15px 0 0 11px; 
+}
+body.front .node-type-theme-week-page .theme_week_text,  body.page-theme-weeks .theme_week_text {
+	width:450px;
+
+}
+body.front .node-type-theme-week-page .theme_week_text p {
+	margin:0;
+}
+body.front .twp {
+	margin:0;
+	padding:0;
+	height:60px;	
+	width:205px;
+	
+}
+.tw-node-teaser h2 {
+	font-size:.85em;
+	line-height:1.285em;
+	margin:0;
+	padding:0;
+}
+.tw-node-teaser h2 a {
+		margin:0;
+		padding:0;
+	}	
+
+ body.front .node-type-themeweek .submitted, body.front .node-type-theme-week-page .submitted
+  {
+	display:block;
+	font-size:1em;
+  }
+  
+  body.front #main .node-type-themeweek .node-inner, body.front #main .node-type-theme-week-page .node-inner
+  {
+  margin-bottom:0em;
+  }
+/*Theme week page*/
+body.node-type-theme-week-page .theme_week_text, body.page-theme-weeks .theme_week_text {
+	width:450px;
+}
+body.page-theme-weeks .themeweek-container
+  {
+float:right;
+width:222px;  
+margin:15px 239px 0 0;
+padding:0;
+}
+body.node-type-theme-week-page .themeweek-container
+  {
+float:right;
+width:222px;  
+margin:-3px 239px 0 0;
+padding:0;
+}
+
+body.node-type-theme-week-page .theme_week_image,  body.page-theme-weeks .theme_week_image {
+	width:461px;
+	margin-top:18px;
+	padding-bottom:2px;
+}
+body.node-type-theme-week-page .theme_week_image2,  body.page-theme-weeks .theme_week_image2 {
+	width:461px;
+	margin-top:8px;
+}
+body.node-type-theme-week-page h1 {
+	margin: 0 0 8px 0;
+	
+}
+.twp {
+	margin:0;
+	padding:0;
+	height:80px;	
+	width:222px;
+clear:both;
+}
+
+ .twp-embed-image img, .twp-teaser-image img {
+	width:80px;
+	float:left;
+	margin:3px 5px 10px 0;
+	height:60px;
+}
+
+.twp-node-teaser h2, .twp-node-teaser.submitted {
+	font-size:.85em;
+	line-height:1.285em;
+	margin:0;
+}
+.embed-image img {
+	width:80px;
+	height:60px;	
+}
+.teaser-image img, .embed-image img {
+min-width:80px;
+max-width:120px;
+min-height:60px;
+max-height:180px;
+}
+
+.teaser-image, .embed-image{
+width:80px;
+height:60px;
+overflow:hidden;	
+margin:3px 5px 16px 0;
+}
+.teaser-image p, .embed-image p, .tw-teaser-image p, .tw-embed-image p, .twp-teaser-image p, .twp-embed-image p  {
+	margin:0;
+	padding:0;
+}
+
+.view-recent-unselected .more-link {
+	margin-right:18px;
+	clear:both;
+	padding:20px 0 30px 0;
+}
+
+.edit {
+	float:right;
+	margin-top:20px;
+}
+  
+
+body.front #content-bottom {
+	margin:16px 0 0 0;
+	clear:both;
+	
+} .view-content-tracker{
+	
+		margin:4px 0 0 0;
+}
+  /* primary -- Left Masthead Menu
+  ----------------------------------------------------*/
+  
+  #primary a
+  {
+
+  font-weight:bold;
+  color:#333;
+  letter-spacing: .1em;
+  font-size: 1.285em;
+  padding:0 1.6em 0 0;
+  }
+  
+   #primary a.active
+  {
+  color:#dd5520;
+  }
+  
+  #primary a:hover
+  {
+  text-decoration: none;
+  color:#c9300c;
+  }
+  
+/*  Blocks with rounded edges boxes and grey gradient background on homepage */
+
+#block-views-theme_week-block_1, #block-views-recent_contributors, #block-apachesolr_mediacommons-sort, #block-apachesolr_mediacommons-smfield_subject, 
+#block-apachesolr_search-im_vid_1, #block-apachesolr_search-uid {
+	background: transparent url(images/block-background-top.png) 0 0 no-repeat;
+	margin-bottom:5px;
+}
+
+#block-views-theme_week-block_1 .content, #block-views-recent_contributors .content, #block-apachesolr_mediacommons-sort .content,#block-apachesolr_mediacommons-smfield_subject .content, 
+#block-apachesolr_search-im_vid_1 .content, #block-apachesolr_search-uid .content{
+	background:#f1f1f1 url(images/block-background-middle.png) 0 0 no-repeat;
+	min-height:65px;
+}
+#block-views-theme_week-block_1 .content ul, #block-views-recent_contributors .content ul, #block-apachesolr_mediacommons-sort .content ul, 
+#block-apachesolr_mediacommons-smfield_subject .content ul, #block-apachesolr_search-im_vid_1 .content ul, #block-apachesolr_search-uid .content ul{
+	margin:0;
+	padding: 0 11px 5px 11px;
+		line-height:1.285em;
+}
+#block-views-theme_week-block_1 .content ul li, #block-views-recent_contributors .content ul li, #block-apachesolr_mediacommons-sort .content ul li, 
+#block-apachesolr_mediacommons-smfield_subject .content ul li, #block-apachesolr_search-im_vid_1 .content ul li, #block-apachesolr_search-uid .content ul li{
+	font-weight:bold;
+
+}
+#block-views-theme_week-block_1 h2.title, #block-views-recent_contributors  h2.title, #block-apachesolr_mediacommons-sort  h2.title, #block-apachesolr_mediacommons-smfield_subject  h2.title, 
+#block-apachesolr_search-im_vid_1  h2.title, #block-apachesolr_search-uid  h2.title{
+	margin:0;
+	padding: 6px 5px 0 11px;
+	line-height:1.285em;
+}
+#block-views-theme_week-block_1 .more-link, #block-views-recent_contributors .more-link, #block-apachesolr_mediacommons-sort .more-link,
+#block-apachesolr_mediacommons-smfield_subject .more-link, #block-apachesolr_search-im_vid_1 .more-link, #block-apachesolr_search-uid .more-link {
+	float:none;
+	text-align:left;
+	padding: 0 11px 0 11px;
+	line-height:1.285em;
+}
+#block-views-theme_week-block_1 .block-bottom, #block-views-recent_contributors .block-bottom, #block-apachesolr_mediacommons-sort .block-bottom, 
+#block-apachesolr_mediacommons-smfield_subject .block-bottom, #block-apachesolr_search-im_vid_1 .block-bottom, #block-apachesolr_search-uid .block-bottom {
+	background:transparent url(images/block-background-bottom.png) 0 0  no-repeat;
+	height:5px;
+	margin-bottom:13px;
+}
+#block-apachesolr_mlt-1 {
+	width:461px;
+	
+}
+/* END  Blocks with rounded edges boxes and grey gradient background on homepage */
+
+  body.front #content-area 
+  {
+
+  }
+
+  .clear 
+  {
+  clear:both;
+  }
+  /*More Posts/recent posts/search Change the Left margin to 0 to allow 3 or 4 columns of teasers*/
+body.section-more-posts.no-sidebars #content
+  {
+  width: 958px;
+  margin-left: 0;
+  margin-right: -958px; /* Negative value of #content's width + left margin. */
+}
+body.front.sidebar-left #content, body.section-search.sidebar-left #content, body.section-recent-posts.sidebar-left #content {
+	width: 717px;
+    margin-left: 239px; /* The width of #sidebar-left. */
+    margin-right: -956px; /* Negative value of #content's width + left margin. */
+}
+#simplemenu {
+	background:#000;
+	color:#fff;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Bitstream Vera Sans", Verdana, sans-serif;
+	font-size: 0.875em; /* 16px x .875 = 14px */
+    line-height: 1.286em; /* 14px x 1.286 = 18px */
+	width:100%;
+	z-index:9999;
+	text-align:left;
+}
+#simplemenu a {
+	color:#fff;
+	text-decoration:none;
+	padding:3px 12px 5px 12px;
+	width:auto;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Bitstream Vera Sans", Verdana, sans-serif;
+}
+#simplemenu li {
+  background:transparent;
+  line-height: 1.286em; /* 14px x 1.286 = 18px */
+}
+#simplemenu li.expanded > a {
+	
+	background:url(images/arrow_right.gif) no-repeat 94%;
+	padding-right:18px;
+}
+#simplemenu li.root > a {
+	background:url(images/arrow_down.gif) no-repeat 94%;
+	padding-right:18px;
+}
+#simplemenu li:hover, #simplemenu li.sfHover,
+#simplemenu a:focus, #simplemenu a:hover, #simplemenu a:active {
+  background: #dd5520;
+	color:#fff;
+}
+#simplemenu li ul {
+  border:0px solid #ccc;
+	background:#dd5520;
+	margin-top:2px;
+}
+#simplemenu li ul a {
+	color:#fff; 
+	height:auto;
+}
+#simplemenu li ul li:hover, #simplemenu li ul li.sfHover,
+#simplemenu li ul a:focus, #simplemenu li ul a:hover, #simplemenu li ul a:active {
+  background-color:#c9300c;
+	color:#fff;
+}
+#simplemenu li ul li ul{
+	background:#dd5520;
+	margin-top:1px;
+}
+
+.node-teaser ul.links-inline .comment_add, .node-teaser ul.links-inline .node_read_more, .node-teaser ul.links-inline .comment_forbidden  {
+	display:none;
+	
+}
+.node-teaser ul.links-inline {
+	list-style:none;
+	display:inline;
+	padding:0;
+	margin:0;
+	
+}
+
+.node-teaser ul.links-inline li {
+	list-style:none;
+	display:inline;
+}
+.node-teaser.node-type-post .content {
+	float:left;	
+}
+/* Featured Comments block on Homepage */
+#block-views-recent_comments-block_1.view-label-node-title,
+#block-views-recent_comments-block_1 .view-data-node-title
+ {
+	display:inline;
+}
+
+.page-recent-comments .view-data-node-data-field-image-embed-field-image-embed-value,
+.page-recent-comments .view-data-node-data-field-tease-image-field-tease-image-fid {
+float:left;
+margin:3px 5px 0 0;
+}
+.view-data-node-data-field-image-embed-field-image-embed-value p {
+margin:0;
+}
+
+/* Featured Comments Page */
+.page-recent-comments .view-data-node-data-field-image-embed-field-image-embed-value img {
+width:80px;
+}
+.page-recent-comments #content-area {
+margin-top:6px;
+}
+.page-recent-comments .view-label-users-name, 
+.page-recent-comments .view-data-users-name,
+.page-recent-comments .view-label-comments-name,
+.page-recent-comments .view-data-comments-name {
+display:inline;
+}
+.view-data-comments-subject,
+li.comment_new_comments  {
+	font-weight:bold;
+}
+.view-label-node-title,
+.view-data-node-title  {
+display:inline;
+}
+
+/* Add a gradient overlay to the h1 title on the page */
+#content-header h1 {
+	position: relative;
+	color: #111;
+	padding: 0;
+	margin-bottom:.5em;
+}
+#content-header h1 span {
+	background: url(images/gradient-glossy8a.png) 0 -2px repeat-x ;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 24px;
+}
+
+/* Add a gradient overlay to the h2 blocks on the page */
+.block-inner h2 {
+	position: relative;
+	color: #222;
+	padding: 0;
+}
+.block-inner h2 span {
+	background: url(images/gradient-grey2.png) repeat-x 0 -1px;
+	position: absolute;
+	display: block;
+	width: 210px;
+	height: 24px;
+}
+
+/* The picture of the node author */
+.node-type-post .picture, .node-type-blog .picture  
+{
+	float:left;
+	width:85px;
+	margin:0 18px 0 0;
+}
+
+/* Styling for RSS feeds*/
+/* Override default styling */
+#block-node-0.block, 
+#block-block-5.block,
+#block-views-Node_RSS-block_1.block,
+#sidebar-right #block-node-0 .block-bottom, 
+#sidebar-right #block-block-5 .block-bottom,
+#sidebar-right #block-views-Node_RSS-block_1 .block-bottom,
+#sidebar-right #block-node-0 .content, 
+#sidebar-right #block-block-5 .content,
+#sidebar-right #block-views-Node_RSS-block_1 .content
+{
+	background:none;
+}
+
+#block-views-lions_share-block_1 h2.title {
+	margin:0;
+	padding: 6px 1px 0 11px;
+	line-height:1.285em;
+	font-size:1.05em;
+}
+
+/* Styling for RSS feeds */
+#block-views-Node_RSS-block_1
+{
+	background: transparent url(images/rss-background.png) 0 0 no-repeat !important;
+	margin-bottom:5px;
+	margin-top:16px;
+	height:32px;
+	padding:8px 11px 8px 10px;
+}
+#block-node-0.block
+{
+	background: transparent url(images/rss-background.png) 0 0 no-repeat;
+	margin-bottom:5px;
+	margin-top:16px;
+	height:32px;
+	padding: 8px 11px 7px 10px;
+}
+/*
+#block-node-0 
+{
+	background: transparent url(images/rss-background.png) 0 0 no-repeat;
+	margin-top:16px;
+	height:17px;
+	width:16px;
+	padding: 8px 11px 7px 10px;
+	display:block;
+}
+
+#block-views-Node_RSS
+{
+	background: transparent url(images/rss-background.png) 0 0 no-repeat;
+	margin-top:16px;
+	height:32px;
+	padding: 8px 11px 8px 0px;
+}
+#block-views-Node_RSS .more-link a 
+{
+
+}
+*/
+/* hide feed icon by default*/
+.block-views .more-link img 
+{
+	display:none;	
+}
+.block-views .more-link 
+{
+	padding: 0 11px 0 11px;
+}
+/* show feed icon on RSS block*/
+#block-views-Node_RSS.block-views .more-link img {
+	display:block;
+}
+/* hide more text on RSS block*/
+#block-views-Node_RSS .more-link span {
+	display:none;	
+}
+
+body.page-user-login .user-link-imr, body.page-user-register .user-link-imr , body.page-user .user-link-imr, body.page-user-password .user-link-imr {
+	display:none;
+}
+/* Devel Execute php block */
+#devel-execute-form {
+	width :461px;
+}
+
+.node-type-post .node-type-nodereview .node-inner {
+	width:467px;	
+	/**border:solid;**/
+	clear:left;
+	min-height:50px;
+	margin-bottom:18px;
+}
+
+.node-type-nodereview .picture  img {
+	min-width: 56px !important;
+	min-height: 56px !important;
+	margin:-10px 0 0 -5px;
+	float:left;
+	max-height:66px;
+	max-width:66px;
+}
+.node-type-nodereview .picture  {
+	height:48px;
+	width:48px;
+	overflow:hidden;
+	margin:0 18px 0 0;	
+}
+
+/* for IE6 */
+* html .node-type-nodereview  .picture img {
+	width: 48px !important;
+	height: 48px !important;
+	margin:0 18px 0 0;
+}
+/* end for IE6 */
+.node-type-nodereview span.feedback-more {
+	color: #DD5520;
+	font-weight:bold;
+}
+.node-type-nodereview span.feedback-hide {
+
+	display:none;
+}
+.node-type-nodereview .submitted, .node-type-nodereview h2, .node-type-nodereview h3 {
+	line-height:24px;
+}
+.node-type-nodereview h3 {
+	line-height:18px;
+}
+.node-type-nodereview h3, .node-type-post h4 {
+	font-size: 1em;
+}
+.node-type-nodereview .feedback {
+
+}
+.node-type-post h4 {
+	display:inline;
+	font-size: 1em;
+}
+.node-type-post h5 {
+	display:inline;
+	font-size: 1em;
+	margin:0 0 0 16px;
+}
+.embedded-nodereview-form {
+	position:relative;
+	width:460px;
+	border:none;
+	margin:8px 0 16px 0;
+}
+.embedded-nodereview-form .standard {
+	clear:none;
+}
+.node-type-post .node-inner {
+	display:inline;
+}
+.embedded-nodereview-form ul.nodereviews-list {
+	list-style:none;
+	margin:8px;
+}
+#popups {
+	width:459px;
+}
+
+.embedded-nodereview-form #edit-reviews-4-checked-message, 
+#popups #edit-reviews-4-checked-message {
+	color:#666;
+	margin:8px 0;
+}
+#popups .node-type-nodereview {
+	clear:both;
+	margin: 0 0 16px 0;
+}
+#popups-title div.title {
+	float:none;
+}
+
+#block-block-1 p {
+  text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Bitstream Vera Sans', Verdana, sans-serif;
+  font-size: .9em;
+}
+
+#block-block-1 p.extras {
+  margin-bottom: 0;
+}
+
+#block-block-1 p.powered {
+  margin-top: 0;
+}
+/* Max words remaing counter */ 
+
+.maxlength-counter {
+	margin: 1em 0;
+}
+#switch_edit-comment {
+	display:block;
+	margin: 1em 0; 
+}
+.input-formats {
+	display:none;
+}
+
+.search-results .apachesolr_search {
+  float: left;
+  width: 222px;
+  margin: 17px 17px 0px 0px;
+}
+
+.search-results .apachesolr_search .snippet {
+  font-size: 0.857em;
+  line-height: 1.5em;
+}
