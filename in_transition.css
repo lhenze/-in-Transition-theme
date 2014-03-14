@@ -820,7 +820,7 @@ margin-top:13px;
 #block-menu-menu-anon/*'Anon' menu block */
   {
 	/*margin-left:240px;*/
-  	float:left;
+  	float:right;
 	clear:both;
   }
 
@@ -871,9 +871,10 @@ margin-top:13px;
 
   #block-search-0 /* "Search form" block */
   {
-  	margin: 2px 0 0 240px;
+  	margin: 2px 0 0 0;
 	padding:0;
-	clear:both;
+	clear:both;    
+    min-width: 250px;
   }
  /* hide the "Search this site" text */
 #block-search-0 label {
