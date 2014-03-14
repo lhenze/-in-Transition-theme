@@ -171,7 +171,7 @@ background: url('images/cinemajournalproject.png') 0 0 no-repeat;
   #header-blocks /* Wrapper for any blocks placed in the header region */
   {
 	float:right;
-  	width:461px;
+  	width: 420px;
 	text-align:right;
 	margin-right:18px;
 	margin-top:3px;
@@ -819,7 +819,7 @@ margin-top:13px;
   
 #block-menu-menu-anon/*'Anon' menu block */
   {
-	margin-left:240px;
+	/*margin-left:240px;*/
   	float:left;
 	clear:both;
   }
@@ -842,7 +842,7 @@ margin-top:13px;
   {
   	float:right;
 	clear:both;
-	width:461px;
+	/*width:461px;*/
  }
   #block-menu-menu-logged-in ul {
 	text-align:right;
