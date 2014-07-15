@@ -128,8 +128,7 @@
           <?php endif; ?>
 
           <?php if ($site_slogan): ?>
-            <div id='site-slogan' ><a href="http://mediacommons.futureofthebook.org/" class="replace"  id='site-slogan-link' title="MediaCommons"><?php print $site_slogan; ?><em></em></a>
-              <a href="http://www.cmstudies.org/?page=cinema_journal" class="replace"  id='site-slogan-link2' title="Cinema Journal - Society for Cinema &amp; Media Studies">Cinema Journal - Society for Cinema &amp; Media Studies<em></em></a></div>
+            <div id='site-slogan' ><a href="http://mediacommons.futureofthebook.org/" class="replace"  id='site-slogan-link' title="MediaCommons"><?php print $site_slogan; ?><em></em></a><a href="http://www.cmstudies.org/?page=cinema_journal" class="replace"  id='site-slogan-link2' title="Cinema Journal - Society for Cinema &amp; Media Studies">Cinema Journal - Society for Cinema &amp; Media Studies<em></em></a></div>
           <?php endif; ?>
 
         </div> <!-- /#logo-title -->
