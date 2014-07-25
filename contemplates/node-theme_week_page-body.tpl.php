@@ -1,5 +1,5 @@
 <div class="themeweek-container"> 
-  <?php include_once 'sites/mediacommons.futureofthebook.org.intransition/themes/in_transition/template.php'; ?>
+  <?php include_once drupal_get_path('theme', 'in_transition') . '/template.php'; ?>  
   <?php print in_transition_themeweek($field_featured_post_1, $node->field_featured_1_placeholder, 55); ?>
   <?php print in_transition_themeweek($field_featured_post_2, $node->field_featured_2_placeholder, 55); ?>
   <?php print in_transition_themeweek($field_featured_post_3, $node->field_featured_3_placeholder, 55); ?>
