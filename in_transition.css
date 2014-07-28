@@ -1814,3 +1814,55 @@ body.page-user-login .user-link-imr, body.page-user-register .user-link-imr , bo
   font-size: 0.857em;
   line-height: 1.5em;
 }
+
+.view-display-id-page_with_page_title_1 {
+	margin-top: 1em;
+}
+
+.view-display-id-page_with_page_title_1 
+  .node-type-theme-week-page {
+    width: 700px;
+    background: #fff url(images/theme-week-top.png) 0 0 no-repeat;
+}
+
+.view-display-id-page_with_page_title_1 
+  .node-inner {
+    padding: 15px 0 0 11px;
+}
+
+.view-display-id-page_with_page_title_1 
+  .themeweek-container {
+    float: right;
+    width: 222px;
+    margin: 0 0 0 0;
+    padding: 0;
+    height: 290px;
+}
+
+.view-display-id-page_with_page_title_1 
+  .twp {
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    width: 205px;
+}
+
+.view-display-id-page_with_page_title_1
+  .title-below {
+    font-size: 1.716em;
+    line-height: 1em;
+    margin: 0;
+}
+
+.view-display-id-page_with_page_title_1
+  .theme_week_text {
+    width: 450px;
+}
+
+.view-display-id-page_with_page_title_1
+  .theme_week_bottom {
+    background: #fff url(images/theme-week-bottom.png) 0 0 no-repeat;
+    height: 10px;
+    margin-left: -11px;
+}
+
